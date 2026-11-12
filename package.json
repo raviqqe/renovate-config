@@ -2,10 +2,12 @@
   "name": "renovate-config",
   "version": "0.1.0",
   "scripts": {
-    "format": "oxfmt org-inherited-config.json"
+    "format": "oxfmt org-inherited-config.json",
+    "lint": "RENOVATE_X_IGNORE_RE2=true renovate-config-validator --strict org-inherited-config.json"
   },
   "devDependencies": {
-    "oxfmt": "^0.78.0"
+    "oxfmt": "^0.78.0",
+    "renovate": "^44.227.4"
   },
   "engines": {
     "node": "^26.13.0"
