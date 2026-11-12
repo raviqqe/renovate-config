@@ -2,6 +2,7 @@
   "onboarding": false,
   "requireConfig": "optional",
   "enabledManagers": ["npm"],
+  "automerge": true,
   "packageRules": [
     {
       "matchPackageNames": ["*"],
