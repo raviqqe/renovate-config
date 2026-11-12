@@ -10,7 +10,8 @@
     {
       "matchDepTypes": ["packageManager"],
       "matchPackageNames": ["pnpm"],
-      "enabled": true
+      "enabled": true,
+      "minimumReleaseAge": "1 day"
     }
   ]
 }
