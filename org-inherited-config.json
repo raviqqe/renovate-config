@@ -1,11 +1,18 @@
 {
   "onboarding": false,
   "requireConfig": "optional",
-  "enabledManagers": ["npm"],
+  "enabledManagers": ["gomod", "npm"],
   "automerge": true,
+  "postUpdateOptions": ["gomodTidy"],
   "packageRules": [
     {
-      "matchPackageNames": ["*"],
+      "matchManagers": ["!gomod"],
+      "enabled": false
+    },
+    {
+      "description": "Indirect Go modules stay disabled by default unless they provide tools.",
+      "matchManagers": ["gomod"],
+      "matchDepTypes": ["!indirect"],
       "enabled": false
     },
     {
