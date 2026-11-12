@@ -4,7 +4,7 @@
   "enabledManagers": ["gomod", "npm"],
   "automerge": true,
   "minimumReleaseAge": "1 day",
-  "postUpdateOptions": ["gomodTidy"],
+  "postUpdateOptions": ["gomodTidy", "gomodUpdateImportPaths"],
   "packageRules": [
     {
       "matchManagers": ["!gomod"],
@@ -15,6 +15,12 @@
       "matchManagers": ["gomod"],
       "matchDepTypes": ["!indirect"],
       "enabled": false
+    },
+    {
+      "description": "Renovate does not rewrite tool paths on major updates of Go modules.",
+      "matchManagers": ["gomod"],
+      "matchUpdateTypes": ["major"],
+      "automerge": false
     },
     {
       "matchDepTypes": ["engines"],
