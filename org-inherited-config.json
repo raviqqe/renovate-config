@@ -8,6 +8,11 @@
       "enabled": false
     },
     {
+      "matchDepTypes": ["engines"],
+      "enabled": true,
+      "rangeStrategy": "bump"
+    },
+    {
       "matchDepTypes": ["packageManager"],
       "matchPackageNames": ["pnpm"],
       "enabled": true,
