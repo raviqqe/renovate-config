@@ -8,7 +8,7 @@ concurrency:
   group: lint-${{ github.ref }}
   cancel-in-progress: true
 jobs:
-  format:
+  config:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7.0.1
@@ -19,6 +19,7 @@ jobs:
           node-version-file: package.json
       - run: pnpm i
       - run: pnpm format --check
+      - run: pnpm lint
   spell_check:
     runs-on: ubuntu-latest
     steps:
@@ -28,7 +29,7 @@ jobs:
           files: "**/*.md"
   lint:
     needs:
-      - format
+      - config
       - spell_check
     if: always()
     runs-on: ubuntu-latest
