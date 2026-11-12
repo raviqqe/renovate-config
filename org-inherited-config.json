@@ -3,6 +3,7 @@
   "requireConfig": "optional",
   "enabledManagers": ["gomod", "npm"],
   "automerge": true,
+  "minimumReleaseAge": "1 day",
   "postUpdateOptions": ["gomodTidy"],
   "packageRules": [
     {
@@ -23,8 +24,7 @@
     {
       "matchDepTypes": ["packageManager"],
       "matchPackageNames": ["pnpm"],
-      "enabled": true,
-      "minimumReleaseAge": "1 day"
+      "enabled": true
     }
   ]
 }
