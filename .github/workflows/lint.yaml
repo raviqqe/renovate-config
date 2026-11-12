@@ -18,7 +18,7 @@ jobs:
           cache: pnpm
           node-version-file: package.json
       - run: pnpm i
-      - run: pnpm lint
+      - run: pnpm format --check
   spell_check:
     runs-on: ubuntu-latest
     steps:

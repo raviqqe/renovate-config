@@ -2,7 +2,7 @@
   "name": "renovate-config",
   "version": "0.1.0",
   "scripts": {
-    "lint": "oxfmt --check org-inherited-config.json"
+    "format": "oxfmt org-inherited-config.json"
   },
   "devDependencies": {
     "oxfmt": "^0.78.0"
