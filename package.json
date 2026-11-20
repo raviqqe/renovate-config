@@ -6,7 +6,7 @@
     "lint": "RENOVATE_X_IGNORE_RE2=true renovate-config-validator --strict org-inherited-config.json"
   },
   "devDependencies": {
-    "oxfmt": "^0.78.0",
+    "oxfmt": "^0.79.0",
     "renovate": "^44.247.1"
   },
   "engines": {
