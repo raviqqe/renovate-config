@@ -7,7 +7,7 @@
   },
   "devDependencies": {
     "oxfmt": "^0.79.0",
-    "renovate": "^44.257.9"
+    "renovate": "^44.259.0"
   },
   "engines": {
     "node": "^26.13.1"
